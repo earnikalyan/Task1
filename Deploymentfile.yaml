@@ -1,0 +1,17 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: heloworld
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: heloworld
+    spec:
+      containers:
+        - name: heloworld
+          image: 389670566897.dkr.ecr.ap-northeast-1.amazonaws.com/firstclass:latest
+          ports:
+            - containerPort: 8080
